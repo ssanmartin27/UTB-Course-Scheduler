@@ -5,6 +5,7 @@ const Banner = require('./banner')
 const app = express()
 const banner = new Banner('utb')
 app.use(cors())
+app.use(express.static('build'))
 
 
 app.get('/:method/*', (request, response) => {
